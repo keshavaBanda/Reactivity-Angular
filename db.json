@@ -1,0 +1,57 @@
+{
+  "$schema": "./node_modules/json-server/schema.json",
+  "items": [
+    {
+      "id": "sci-1",
+      "name": "Super Cool Item",
+      "price": 5.99,
+      "imageThumbnail": "../assets/thumb-1.jpg"
+    },
+    {
+      "id": "aci-1",
+      "name": "Another Cool Item",
+      "price": 11.99,
+      "imageThumbnail": "../assets/thumb-2.jpg"
+    },
+    {
+      "id": "yaci-1",
+      "name": "Yet Another Cool Item",
+      "price": 18.99,
+      "imageThumbnail": "../assets/thumb-3.jpg"
+    }
+  ],
+  "shipping": [
+    {
+      "id": "eastern",
+      "options": [
+        { "name": "Standard Shipping", "price": 10.0 },
+        { "name": "Speedy Shipping", "price": 18.0 },
+        { "name": "Overnight Shipping", "price": 35.0 }
+      ]
+    },
+    {
+      "id": "central",
+      "options": [
+        { "name": "Standard Shipping", "price": 5.0 },
+        { "name": "Faster Shipping", "price": 18.0 },
+        { "name": "Overnight Shipping", "price": 29.0 }
+      ]
+    },
+    {
+      "id": "mountain",
+      "options": [
+        { "name": "Standard Shipping", "price": 5.0 },
+        { "name": "Two Day Shipping", "price": 12.0 },
+        { "name": "Faster Shipping", "price": 18.0 },
+        { "name": "Overnight Shipping", "price": 32.0 }
+      ]
+    },
+    {
+      "id": "pacific",
+      "options": [
+        { "name": "Standard Shipping", "price": 10.0 },
+        { "name": "Overnight Shipping", "price": 35.0 }
+      ]
+    }
+  ]
+}
