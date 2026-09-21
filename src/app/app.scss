@@ -1,45 +1,44 @@
-table {
-  width: 100%;
-  border-collapse: collapse;
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-th,
-td {
-  padding: 12px 16px;
-  border: 1px solid #ccc;
-  text-align: left;
-}
-
-thead {
-  background-color: #f4f4f4;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #fafafa;
-}
-
-tfoot {
-  background-color: #f4f4f4;
-
-  tr:last-of-type {
-    font-weight: bold;
-    background-color: #ceecfc;
-  }
-}
-
-button {
-  margin: 20px;
-  padding: 10px 20px;
-}
-
-.shipping-methods {
+.app-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  height: 100vh;
 }
 
-.warning {
-  background-color: rgb(249, 214, 186);
-  font-size: .8rem;
-  padding: 10px;
+.header {
+  width: 100%;
+  background-color: #bddefc;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  font-size: 2rem;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.content-row {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background-color: #bddefc;
+}
+
+.main-content {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 24px;
+  overflow: auto;
+  box-sizing: border-box;
 }

@@ -1,0 +1,29 @@
+@let selected = selectedProduct.value();
+@let loading = selectedProduct.isLoading();
+@let error = selectedProduct.error();
+
+
+<div class="detail-view">
+  <div class="detail-card">
+    @if(selected) {
+    <h2 class="product-name">{{ selected.name }}</h2>
+    <div class="detail-content">
+      <div class="detail-image">
+        <img [src]="selected.imageThumbnail" alt="" />
+      </div>
+      <div class="detail-info">
+        <div class="product-description">{{ selected.description }}</div>
+        <div class="product-quantity">Quantity: {{ selected.quantity }}</div>
+        <div class="product-price">Price: {{ selected.price }}</div>
+        <button class="add-to-cart-btn" (click)="addToCart(selected.id)">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+    } @else if(loading) {
+    <h2>Product is loading...</h2>
+    }@else if(error){
+    <h2>Oops! Something went wrong</h2>
+    }
+  </div>
+</div>
