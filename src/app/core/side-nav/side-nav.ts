@@ -13,18 +13,4 @@ export class SideNav {
   protected readonly productService = inject(Product);
   readonly products = toSignal(this.productService.getProducts(), { initialValue: [] });
 
-  // productData = toObservable(this.products);
-
-  // ngOnInit(){
-  //   this.getProductData();
-  // }
-
-  // getProductData(){
-  //   this.productData.subscribe({
-  //     next: (data)=> console.log(data),
-  //     error: (err)=> console.log(err)
-  //   })
-  // }
-
-
 }
