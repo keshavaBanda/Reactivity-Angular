@@ -3,6 +3,7 @@ import { ChangeDetectionStrategy, Component, signal, computed, effect, linkedSig
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ShippingService } from './service/shipping';
 import { Timezones } from './service/shipping-data';
+import { Pratice } from './pratice/pratice/pratice';
 
 interface ShippingMethod {
   name: string;
@@ -14,10 +15,12 @@ interface ShippingMethod {
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
-  imports: [CurrencyPipe],
+  imports: [CurrencyPipe, Pratice],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class App {
+
+  public isPratice: boolean = false;
   public shippingService = inject(ShippingService)
 
   readonly shippingMethods = toSignal(this.shippingService.getShippingMethods(), {
@@ -58,7 +61,7 @@ export class App {
 
   constructor() {
     effect(() => {
-      console.log("Count is ", this.quantity());
+      // console.log("Count is ", this.quantity());
     })
   }
 
