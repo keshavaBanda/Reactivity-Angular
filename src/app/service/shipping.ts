@@ -1,13 +1,14 @@
 import { Injectable, linkedSignal, signal } from '@angular/core';
 import { EASTERN, ShippingConfig, ShippingMethod, Timezones } from './shipping-data';
 import { httpResource } from '@angular/common/http';
+import { environment } from '../../environments/environments';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ShippingService {
   readonly shippingMethodIndex = signal<Timezones>(EASTERN);
-  readonly shippingMethods = httpResource<ShippingConfig>(() => `/api/shipping/${this.shippingMethodIndex()}`);
+  readonly shippingMethods = httpResource<ShippingConfig>(() => `${environment.baseUrl}/api/shipping/${this.shippingMethodIndex()}`);
 
   readonly shippingMethod = linkedSignal<ShippingConfig | undefined, ShippingMethod | undefined>({
     source: this.shippingMethods.value,
