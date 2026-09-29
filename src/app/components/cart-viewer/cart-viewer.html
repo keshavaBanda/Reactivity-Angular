@@ -13,7 +13,9 @@
     @for(item of cartItems(); track item.id) {
     <tr>
       <td><button (click)="addToCart(item.id)">Add {{item.name}} to Cart</button></td>
-      <td><img [src]="item.imageThumbnail" width="50" height="50" /></td>
+      <td>
+        <img [src]="item.imageThumbnail" width="75" height="75" />
+      </td>
       <td>{{ item.name }}</td>
       <td>{{ item.quantity }}</td>
       <td>{{ item.price | currency }}</td>
